@@ -1,50 +1,43 @@
-# Welcome to your Expo app 👋
+# ☕ Kaffeine
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Kaffeine** é um aplicativo mobile moderno de coffee shop desenvolvido com **React Native** e **Expo**. O projeto combina design minimalista com uma arquitetura robusta, focada em performance e escalabilidade.
 
-## Get started
+## 🚀 O Projeto
 
-1. Install dependencies
+O aplicativo foi desenhado para remover barreiras de conversão. O usuário pode explorar o catálogo de cafés e métodos de preparo de forma anônima (Guest Mode). O login é exigido apenas no momento crítico do checkout, garantindo uma experiência de navegação contínua.
 
-   ```bash
-   npm install
-   ```
+### Fluxo Principal
 
-2. Start the app
+- **Onboarding**: Apresentação da marca e proposta de valor com navegação por pontos.
+- **Discovery**: Listagem completa de produtos sem necessidade de autenticação prévia.
+- **Checkout & Auth**: Autenticação inteligente acionada no momento da compra.
+- **Payment (Pix)**: Geração de QR Code dinâmico com função "Copia e Cola" e contador de expiração.
+- **Sucesso**: Confirmação visual e feedback tátil após a validação do pagamento.
 
-   ```bash
-   npx expo start
-   ```
+[Image of mobile app payment flow with QR code and success screen]
 
-In the output, you'll find options to open the app in a
+## 🛠️ Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Core**: React 19 & React Native 0.81
+- **Framework**: Expo 54 (SDK 54)
+- **Roteamento**: Expo Router v6
+- **UI System**: Gluestack UI v3 (Core + Utils)
+- **Styling**: NativeWind v4 (Tailwind CSS)
+- **Design Tokens**: Plus Jakarta Sans (Typography)
+- **Animações**: React Native Reanimated & Legend Motion
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🏗️ Estrutura de Pastas
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+├── app/                  # Rotas e navegação (Expo Router)
+│   ├── (welcome)/        # Fluxo de Onboarding e boas-vindas
+│   ├── (auth)/           # Fluxo de Autenticação (Login/Cadastro)
+│   ├── (tabs)/           # Navegação principal pós-login
+│   └── _layout.tsx       # Root Layout com carregamento de fontes e providers
+├── components/           # Componentes reutilizáveis
+│   ├── ui/               # Componentes base do Gluestack UI
+│   └── _components/      # Componentes específicos (Slides, Pix, etc)
+├── constants/            # Design Tokens (ONBOARDING_DATA)
+├── hooks/                # Hooks customizados (Theme, Logic)
+└── global.css            # Configurações globais do Tailwind/NativeWind
 ```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
