@@ -8,6 +8,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import "../nativewind-interop";
 
 import {
   PlusJakartaSans_400Regular,
@@ -20,7 +21,7 @@ import {
 
 import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import "@/global.css";
-import { useColorScheme } from "@/hooks/use-color-scheme";
+import { useThemeStore } from "@/stores/color-schema";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -29,7 +30,7 @@ export const unstable_settings = {
 };
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
+  const { colorScheme } = useThemeStore();
 
   const [loaded, error] = useFonts({
     "PlusJakartaSans-Regular": PlusJakartaSans_400Regular,
@@ -50,17 +51,13 @@ export default function RootLayout() {
   }
 
   return (
-    <GluestackUIProvider mode="dark">
+    <GluestackUIProvider mode={colorScheme}>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
         <Stack initialRouteName="(welcome)">
           <Stack.Screen name="(welcome)" options={{ headerShown: false }} />
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen
-            name="modal"
-            options={{ presentation: "modal", title: "Modal" }}
-          />
         </Stack>
-        <StatusBar style="light" />
+        <StatusBar style={colorScheme} />
       </ThemeProvider>
     </GluestackUIProvider>
   );

@@ -44,13 +44,15 @@ export default function WelcomeScreen() {
     const nextIndex = currentIndex + 1;
     if (nextIndex < ONBOARDING_DATA.length) {
       scrollToSlide(nextIndex);
+    } else {
+      router.replace("/(tabs)");
     }
   };
 
   return (
     <Box className="flex-1 bg-[#221610] dark:bg-[#221610]">
       <Box className="flex items-end p-4 pt-12">
-        <Button variant="link" onPress={() => {}}>
+        <Button variant="link" onPress={() => router.replace("/(tabs)")}>
           <ButtonText className="text-[#d45211] font-semibold">Skip</ButtonText>
         </Button>
       </Box>
@@ -81,7 +83,7 @@ export default function WelcomeScreen() {
           <TouchableOpacity key={index} onPress={() => scrollToSlide(index)}>
             <Box
               className={`h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex ? "w-6 bg-[#d45211]" : "w-2 bg-gray-700"
+                index === currentIndex ? "w-6 bg-orange-700" : "w-2 bg-gray-700"
               }`}
             />
           </TouchableOpacity>
@@ -91,13 +93,11 @@ export default function WelcomeScreen() {
       <Box className="px-6 pb-12 pt-4">
         <Button
           onPress={handleNext}
-          className="w-full bg-[#d45211] h-16 rounded-xl flex-row items-center justify-center gap-2"
+          className="w-full h-16 rounded-xl flex-row items-center justify-center gap-2 active:opacity-100"
           action="primary"
         >
-          <ButtonText className="text-white font-bold text-lg">
-            {ONBOARDING_DATA[currentIndex].buttonText}
-          </ButtonText>
-          <ButtonIcon as={ArrowRight} className="text-white" />
+          <ButtonText>{ONBOARDING_DATA[currentIndex].buttonText}</ButtonText>
+          <ButtonIcon as={ArrowRight} />
         </Button>
       </Box>
     </Box>

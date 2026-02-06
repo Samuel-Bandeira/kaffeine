@@ -19,6 +19,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        custom: {
+          primary: "rgb(var(--color-custom-primary)/<alpha-value>)",
+          text: "rgb(var(--color-custom-text)/<alpha-value>)",
+          "text-muted": "rgb(var(--color-custom-text-muted)/<alpha-value>)",
+          bg: "rgb(var(--color-custom-bg)/<alpha-value>)",
+          "button-text": "rgb(var(--color-custom-button-text)/<alpha-value>)",
+        },
         primary: {
           0: "rgb(var(--color-primary-0)/<alpha-value>)",
           50: "rgb(var(--color-primary-50)/<alpha-value>)",
