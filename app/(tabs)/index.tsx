@@ -171,7 +171,7 @@ export default function CoffeeMenu() {
 
 // Sub-componentes para limpeza de código
 const MenuCard = ({ title, price, desc, img, router }: any) => (
-  <VStack className="bg-bg-card rounded-xl p-2 border border-custom-primary/10 w-[47%]">
+  <VStack className="bg-custom-bg-card rounded-xl p-2 border border-custom-primary/10 w-[47%]">
     <Box className="w-full aspect-square rounded-lg overflow-hidden">
       <ImageBackground source={{ uri: img }} className="flex-1" />
     </Box>
@@ -203,7 +203,7 @@ const MenuCard = ({ title, price, desc, img, router }: any) => (
 );
 
 const RecommendedCard = ({ title, price, desc, img, router }: any) => (
-  <HStack className="bg-bg-card p-4 rounded-xl border border-custom-primary/10 items-center justify-between">
+  <HStack className="bg-custom-bg-card p-4 rounded-xl border border-custom-primary/10 items-center justify-between">
     <VStack className="flex-1 items-start mr-4">
       <Text className="text-custom-text font-bold font-display text-lg">
         {title}

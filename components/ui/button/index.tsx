@@ -150,7 +150,7 @@ const buttonTextStyle = tva({
       variant: "solid",
       action: "primary",
       class:
-        "text-custom-button-text data-[hover=true]:text-white data-[active=true]:text-white",
+        "text-custom-button-text data-[active=true]:text-custom-button-text",
     },
     {
       variant: "solid",
@@ -229,8 +229,7 @@ const buttonIconStyle = tva({
     {
       variant: "solid",
       action: "primary",
-      class:
-        "text-custom-button-text data-[hover=true]:text-white data-[active=true]:text-white",
+      class: "text-custom-button-text",
     },
     {
       variant: "solid",

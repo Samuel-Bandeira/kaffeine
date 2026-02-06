@@ -33,11 +33,11 @@ export default function CheckoutScreen() {
           onPress={() => router.back()}
           className="size-12 justify-center"
         >
-          <ArrowLeft size={24} className="text-custom-typography" />
+          <ArrowLeft size={24} className="text-custom-text" />
         </TouchableOpacity>
         <Heading
           size="md"
-          className="text-custom-typography font-display text-center flex-1"
+          className="text-custom-text font-display text-center flex-1"
         >
           My Cart
         </Heading>
@@ -48,7 +48,7 @@ export default function CheckoutScreen() {
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <VStack className="p-4" space="md">
-          <Heading className="text-custom-typography">Order Summary</Heading>
+          <Heading className="text-custom-text">Order Summary</Heading>
 
           <CartItem
             name="Latte"
@@ -65,7 +65,7 @@ export default function CheckoutScreen() {
         </VStack>
 
         <VStack className="p-4" space="md">
-          <Heading className="text-custom-typography">Payment Methods</Heading>
+          <Heading className="text-custom-text">Payment Methods</Heading>
           <VStack space="sm">
             <PaymentOption
               id="pix"
@@ -94,7 +94,6 @@ export default function CheckoutScreen() {
           </VStack>
         </VStack>
 
-        {/* Security Badge */}
         <Box className="px-4 py-4">
           <HStack
             className="items-center justify-center py-2 bg-green-500/10 rounded-lg border border-green-500/20"
@@ -113,14 +112,14 @@ export default function CheckoutScreen() {
         <VStack space="xs" className="mb-6">
           <HStack className="justify-between">
             <Text className="text-custom-text-muted">Subtotal</Text>
-            <Text className="text-custom-typography">$12.50</Text>
+            <Text className="text-custom-text">$12.50</Text>
           </HStack>
           <HStack className="justify-between">
             <Text className="text-custom-text-muted">Delivery Fee</Text>
             <Text className="text-green-600 font-bold">FREE</Text>
           </HStack>
           <HStack className="justify-between items-center mt-2">
-            <Text className="text-custom-typography text-xl font-bold">
+            <Text className="text-custom-text text-xl font-bold">
               Total Amount
             </Text>
             <Text className="text-custom-primary text-xl font-bold">
@@ -149,14 +148,14 @@ export default function CheckoutScreen() {
 
 const CartItem = ({ name, price, quantity, img }: any) => (
   <HStack
-    className="bg-white dark:bg-custom-bg-dark/50 p-3 rounded-2xl border border-custom-primary/5 items-center"
+    className="bg-custom-bg-card p-3 rounded-2xl border border-custom-primary/5 items-center"
     space="md"
   >
     <Box className="w-20 h-20 rounded-xl overflow-hidden">
       <ImageBackground source={{ uri: img }} className="flex-1" />
     </Box>
     <VStack className="flex-1" space="xs">
-      <Text className="text-custom-typography font-bold">{name}</Text>
+      <Text className="text-custom-text font-bold">{name}</Text>
       <Text className="text-custom-primary font-semibold text-sm">
         ${price.toFixed(2)}
       </Text>
@@ -164,13 +163,13 @@ const CartItem = ({ name, price, quantity, img }: any) => (
         <TouchableOpacity className="size-8 items-center justify-center rounded-full border border-custom-primary/20">
           <Minus size={14} className="text-custom-primary" />
         </TouchableOpacity>
-        <Text className="text-custom-typography font-bold">{quantity}</Text>
+        <Text className="text-custom-text font-bold">{quantity}</Text>
         <TouchableOpacity className="size-8 items-center justify-center rounded-full bg-custom-primary">
-          <Plus size={14} color="white" />
+          <Plus size={14} className="text-custom-button-text" />
         </TouchableOpacity>
       </HStack>
     </VStack>
-    <Text className="text-custom-typography font-bold">
+    <Text className="text-custom-text font-bold">
       ${(price * quantity).toFixed(2)}
     </Text>
   </HStack>
@@ -190,7 +189,7 @@ const PaymentOption = ({
     className={`flex-row items-center p-4 rounded-2xl border-2 transition-all ${
       selected
         ? "border-custom-primary bg-custom-primary/5"
-        : "border-custom-primary/10 bg-white dark:bg-custom-bg-dark/50"
+        : "border-custom-primary/10 bg-custom-bg-card dark:bg-custom-bg-dark/50"
     }`}
   >
     <Box
@@ -206,7 +205,7 @@ const PaymentOption = ({
     </Box>
     <VStack className="flex-1">
       <Text
-        className={`font-bold ${selected ? "text-custom-typography" : "text-custom-typography"}`}
+        className={`font-bold ${selected ? "text-custom-text" : "text-custom-text"}`}
       >
         {title}
       </Text>
@@ -217,8 +216,8 @@ const PaymentOption = ({
       )}
     </VStack>
     <Box
-      className={`size-5 rounded-full border-4 ${
-        selected ? "border-custom-primary bg-white" : "border-custom-muted/30"
+      className={`size-5 rounded-full border-4 border-custom-primary ${
+        selected ? "border-custom-primary bg-white" : "border-custom-primary/30"
       }`}
     />
   </TouchableOpacity>

@@ -40,11 +40,11 @@ export default function PixPaymentScreen() {
           onPress={() => router.back()}
           className="size-12 items-center justify-center"
         >
-          <ArrowLeft size={24} className="text-custom-typography" />
+          <ArrowLeft size={24} className="text-custom-text" />
         </TouchableOpacity>
         <Heading
           size="md"
-          className="text-custom-typography font-display text-center flex-1 pr-12"
+          className="text-custom-text font-display text-center flex-1 pr-12"
         >
           Pix Payment
         </Heading>
@@ -59,10 +59,10 @@ export default function PixPaymentScreen() {
       >
         {/* Total Amount Section */}
         <VStack className="mt-6 mb-8 items-center">
-          <Text className="text-base font-normal opacity-70 text-custom-typography">
+          <Text className="text-base font-normal opacity-70 text-custom-text">
             Total amount to pay
           </Text>
-          <Heading className="text-4xl font-extrabold text-custom-typography mt-1">
+          <Heading className="text-4xl font-extrabold text-custom-text mt-1">
             R$ 15,90
           </Heading>
         </VStack>
@@ -82,7 +82,7 @@ export default function PixPaymentScreen() {
 
         {/* Instructions */}
         <Box className="mt-8 px-4">
-          <Text className="text-base font-medium text-center leading-relaxed text-custom-typography">
+          <Text className="text-base font-medium text-center leading-relaxed text-custom-text">
             Open your bank app and scan the QR code or copy the code below.
           </Text>
         </Box>
@@ -94,20 +94,20 @@ export default function PixPaymentScreen() {
             router.replace("./success");
           }}
         >
-          <ButtonIcon as={Copy} className="text-white mr-2" />
-          <ButtonText className="text-white font-bold text-lg">
+          <ButtonIcon as={Copy} className="text-custom-button-text mr-2" />
+          <ButtonText className="text-custom-button-text font-bold text-lg">
             Copy Pix Code
           </ButtonText>
         </Button>
 
         {/* Timer Section */}
         <VStack className="mt-10 w-full max-w-xs items-center">
-          <Text className="text-sm font-medium opacity-60 mb-3 text-custom-typography">
+          <Text className="text-sm font-medium opacity-60 mb-3 text-custom-text">
             Expires in
           </Text>
           <HStack space="md" className="items-center">
             <TimerBlock label="Minutes" value={minutes} />
-            <Text className="text-2xl font-bold opacity-30 text-custom-typography">
+            <Text className="text-2xl font-bold opacity-30 text-custom-text">
               :
             </Text>
             <TimerBlock label="Seconds" value={secs} />
@@ -132,7 +132,7 @@ const TimerBlock = ({ value, label }: { value: string; label: string }) => (
     <Box className="h-16 w-16 items-center justify-center rounded-2xl bg-custom-primary/10 dark:bg-custom-primary/20">
       <Text className="text-custom-primary text-2xl font-bold">{value}</Text>
     </Box>
-    <Text className="text-[10px] font-semibold opacity-60 uppercase tracking-wider text-custom-typography">
+    <Text className="text-[10px] font-semibold opacity-60 uppercase tracking-wider text-custom-text">
       {label}
     </Text>
   </VStack>

@@ -8,7 +8,7 @@ import { VStack } from "@/components/ui/vstack";
 import { useRouter } from "expo-router";
 import { ArrowLeft, Coffee, Eye, EyeOff } from "lucide-react-native";
 import React, { useState } from "react";
-import { Image, ScrollView, TouchableOpacity } from "react-native";
+import { ScrollView, TouchableOpacity } from "react-native";
 
 export default function LoginScreen() {
   const router = useRouter();
@@ -124,10 +124,10 @@ export default function LoginScreen() {
                 router.replace("/(tabs)/checkout");
               }}
             >
-              <Image
+              {/* <Image
                 source={require("../../assets/images/google-logo.png")}
                 className="w-5 h-5 mr-1"
-              />
+              /> */}
               <ButtonText className="text-[#1b120d] dark:text-white font-semibold">
                 Continue with Google
               </ButtonText>

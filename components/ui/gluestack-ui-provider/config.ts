@@ -157,7 +157,7 @@ export const config = {
     /* Custom Colors */
     "--color-custom-primary": "212 82 17" /* #d45211 */,
     "--color-custom-bg": "248 246 246" /* #f8f6f6 */,
-    "--color-bg-card": "255 255 255",
+    "--color-custom-bg-card": "255 255 255",
     /* Text and Accents */
     "--color-custom-text": "27 18 13" /* #1b120d (Light mode text) */,
     "--color-custom-text-muted": "154 102 76" /* #9a664c (Description text) */,
@@ -318,7 +318,7 @@ export const config = {
     /* Custom Colors */
     "--color-custom-primary": "255 191 0",
     "--color-custom-bg": "18 18 18" /* #121212 */,
-    "--color-bg-card": "30 30 30",
+    "--color-custom-bg-card": "30 30 30",
     /* Tradução das cores de texto para o Dark */
     "--color-custom-text": "255 255 255" /* Branco para títulos no escuro */,
     /* O "Muted" no dark do seu HTML puxa para o primary suave */

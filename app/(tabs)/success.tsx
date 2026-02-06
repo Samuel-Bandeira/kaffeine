@@ -21,11 +21,11 @@ export default function SuccessScreen() {
           onPress={() => router.push("/(tabs)")}
           className="size-12 justify-center"
         >
-          <X size={24} className="text-custom-typography" />
+          <X size={24} className="text-custom-text" />
         </TouchableOpacity>
         <Heading
           size="md"
-          className="text-custom-typography font-display text-center flex-1 pr-12"
+          className="text-custom-text font-display text-center flex-1 pr-12"
         >
           Payment Success
         </Heading>
@@ -51,25 +51,21 @@ export default function SuccessScreen() {
             </Box>
           </Motion.View>
 
-          <Heading className="text-custom-typography font-display text-[32px] text-center leading-tight">
+          <Heading className="text-custom-text font-display text-[32px] text-center leading-tight">
             Payment Successful
           </Heading>
-          <Text className="text-custom-muted text-base text-center max-w-[280px] font-body">
+          <Text className="text-custom-text text-base text-center max-w-[280px] font-body">
             Your order has been confirmed and is being prepared with love.
           </Text>
         </VStack>
 
         {/* Order Summary Card */}
         <Box className="flex-1 px-4 py-4">
-          <VStack className="bg-white dark:bg-custom-bg-dark/50 rounded-2xl p-6 border border-custom-primary/5 shadow-sm">
-            <Heading
-              size="sm"
-              className="text-custom-typography mb-4 font-display"
-            >
+          <VStack className="bg-custom-bg-card dark:bg-custom-bg-dark/50 rounded-2xl p-6 border border-custom-primary/5 shadow-sm">
+            <Heading size="sm" className="text-custom-text mb-4 font-display">
               Order Summary
             </Heading>
 
-            {/* Order Item */}
             <HStack
               className="items-center py-3 border-b border-custom-primary/5"
               space="md"
@@ -83,34 +79,31 @@ export default function SuccessScreen() {
                 />
               </Box>
               <VStack className="flex-1">
-                <Text className="text-custom-typography font-bold font-display">
+                <Text className="text-custom-text font-bold font-display">
                   1x Caramel Macchiato
                 </Text>
-                <Text className="text-custom-muted text-sm font-body">
+                <Text className="text-custom-text text-sm font-body">
                   Large • Oat Milk
                 </Text>
               </VStack>
-              <Text className="text-custom-typography font-bold">$5.50</Text>
+              <Text className="text-custom-text font-bold">$5.50</Text>
             </HStack>
 
-            {/* Totals Section */}
             <VStack className="pt-4" space="sm">
               <HStack className="justify-between items-center">
-                <Text className="text-custom-muted text-sm">
-                  Payment Method
-                </Text>
+                <Text className="text-custom-text text-sm">Payment Method</Text>
                 <HStack space="xs" className="items-center">
-                  <Landmark size={14} className="text-custom-muted" />
-                  <Text className="text-custom-muted text-sm font-semibold">
+                  <Landmark size={14} className="text-custom-text" />
+                  <Text className="text-custom-text text-sm font-semibold">
                     Pix
                   </Text>
                 </HStack>
               </HStack>
               <HStack className="justify-between items-center mt-2">
-                <Text className="text-custom-typography text-lg font-bold">
+                <Text className="text-custom-text text-lg font-bold">
                   Total Paid
                 </Text>
-                <Text className="text-custom-typography text-lg font-bold">
+                <Text className="text-custom-text text-lg font-bold">
                   $5.50
                 </Text>
               </HStack>
@@ -118,13 +111,12 @@ export default function SuccessScreen() {
           </VStack>
         </Box>
 
-        {/* Sticky-like Bottom Buttons */}
         <VStack className="p-6 pb-12" space="md">
           <Button
             className="w-full h-16 bg-custom-primary rounded-2xl shadow-lg"
             onPress={() => {}}
           >
-            <ButtonText className="text-white font-bold text-lg">
+            <ButtonText className="text-custom-button-text font-bold text-lg">
               Track Order
             </ButtonText>
           </Button>
@@ -140,8 +132,7 @@ export default function SuccessScreen() {
         </VStack>
       </ScrollView>
 
-      {/* iOS Home Indicator Spacer */}
-      <Box className="h-2 w-32 bg-custom-typography/10 rounded-full self-center mb-4" />
+      <Box className="h-2 w-32 text-custom-text/10 rounded-full self-center mb-4" />
     </Box>
   );
 }

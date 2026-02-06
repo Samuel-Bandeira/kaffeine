@@ -25,6 +25,7 @@ module.exports = {
           "text-muted": "rgb(var(--color-custom-text-muted)/<alpha-value>)",
           bg: "rgb(var(--color-custom-bg)/<alpha-value>)",
           "button-text": "rgb(var(--color-custom-button-text)/<alpha-value>)",
+          "bg-card": "rgb(var(--color-custom-bg-card)/<alpha-value>)",
         },
         primary: {
           0: "rgb(var(--color-primary-0)/<alpha-value>)",
