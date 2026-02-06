@@ -30,14 +30,20 @@ O aplicativo foi desenhado para remover barreiras de conversão. O usuário pode
 
 ```text
 ├── app/                  # Rotas e navegação (Expo Router)
-│   ├── (welcome)/        # Fluxo de Onboarding e boas-vindas
-│   ├── (auth)/           # Fluxo de Autenticação (Login/Cadastro)
 │   ├── (tabs)/           # Navegação principal pós-login
+│   │   ├── checkout.tsx
+│   │   ├── index.tsx
+│   │   ├── login.tsx
+│   │   ├── pix-payment.tsx
+│   │   ├── register.tsx
+│   │   ├── success.tsx
+│   │   └── _layout.tsx
+│   ├── (welcome)/        # Fluxo de Onboarding e boas-vindas
 │   └── _layout.tsx       # Root Layout com carregamento de fontes e providers
+├── assets/               # Imagens e fontes
 ├── components/           # Componentes reutilizáveis
-│   ├── ui/               # Componentes base do Gluestack UI
-│   └── _components/      # Componentes específicos (Slides, Pix, etc)
-├── constants/            # Design Tokens (ONBOARDING_DATA)
+│   └── ui/               # Componentes base do Gluestack UI
+├── constants/            # Design Tokens (Theme, Colors)
 ├── hooks/                # Hooks customizados (Theme, Logic)
 └── global.css            # Configurações globais do Tailwind/NativeWind
 ```
